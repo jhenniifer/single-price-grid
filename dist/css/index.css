@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: hsl(204, 43%, 93%);
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 700px;
+}
+
+.card__top {
+  background: white;
+  padding: 1.7em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card__top--head {
+  color: hsl(179, 62%, 43%);
+  margin-bottom: 1rem;
+}
+.card__top--green {
+  color: hsl(71, 73%, 54%);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.card__top--gray {
+  color: hsl(218, 22%, 67%);
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+.card__sub {
+  background: hsl(179, 62%, 43%);
+  padding: 1.7em;
+  color: hsl(204, 43%, 93%);
+}
+.card__sub__head {
+  margin-bottom: 1rem;
+}
+.card__sub__price {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.card__sub__price span {
+  font-size: 1rem;
+  font-weight: 100;
+  text-align: center;
+  opacity: 0.7;
+}
+.card__sub__text {
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+.card__sub__btn {
+  margin-top: 1.5rem;
+  background-color: hsl(71, 73%, 54%);
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.card__why {
+  background: hsl(179, 62%, 43%);
+  opacity: 0.8;
+  padding: 1.7rem;
+  color: hsl(204, 43%, 93%);
+}
+.card__why__head {
+  margin-bottom: 0.7rem;
+}
+.card__why__list {
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .card__bottom {
+    display: flex;
+  }
+  .card__why,
+  .card__sub {
+    width: 50%;
+  }
+}/*# sourceMappingURL=index.css.map */

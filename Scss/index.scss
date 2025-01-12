@@ -1,0 +1,118 @@
+$Cyan: hsl(179, 62%, 43%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+$weights:(
+    "regular": 400,
+   "bold": 700
+);
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: $Light-Gray;
+}
+
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+}
+
+.card__top{
+    background: white;
+    padding: 1.7em ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    &--head{
+        color: $Cyan;
+        margin-bottom: 1rem;
+    }
+
+    &--green{
+        color: $Bright-Yellow;
+        font-weight: map-get($map:$weights, $key:bold);
+        margin-bottom: 1rem;
+    }
+
+    &--gray{
+        color: $Grayish-Blue;
+        font-weight: map-get($map:$weights, $key:regular);
+        margin-bottom: .3rem;
+    }
+}
+
+.card__sub{
+    background: $Cyan;
+    padding: 1.7em;
+    color: $Light-Gray;
+
+    &__head{
+        margin-bottom: 1rem;
+
+    }
+
+    &__price{
+        font-size: 1.5rem;
+        font-weight: map-get($map:$weights, $key: bold);
+
+        span{
+            font-size: 1rem;
+            font-weight: 100;
+            text-align: center;
+            opacity: .7;
+        }
+    }
+
+    &__text{
+        margin-top: .5rem;
+        font-weight: map-get($map:$weights, $key: regular);
+    }
+
+    &__btn{
+        margin-top: 1.5rem;
+        background-color: $Bright-Yellow;
+        color: white;
+        font-weight: map-get($map:$weights, $key: bold);
+        border: none;
+        border-radius: 10px;
+        width: 100%;
+        padding: 1rem;
+    }
+
+}
+
+.card__why{
+    background: $Cyan;
+    opacity: .8;
+    padding: 1.7rem;
+    color: $Light-Gray;
+
+    &__head{
+        margin-bottom:.7rem ;
+    }
+
+    &__list{
+        list-style: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .card__bottom{
+        display: flex ;
+    }
+
+    .card__why,
+     .card__sub{
+        width: 50%;
+    }
+}
+   
